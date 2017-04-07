@@ -61,6 +61,7 @@
     
     if(self.collectionView != nil) {
         // start in the middle of the screen
+//        self.collectionView.contentOffset.x = 30.0;
         CGFloat centerX = self.collectionView.contentOffset.x + (self.collectionView.bounds.size.width / 4 * 3.0);
         // set the anchor point to the center of the roulette wheel starting from the view center
         CGFloat anchorPointY = ((self.itemSize.height/2.0) + self.radius) / self.itemSize.height;
