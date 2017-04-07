@@ -41,6 +41,7 @@
     // set default values
     self.backgroundColor = [UIColor clearColor];
     self.showsVerticalScrollIndicator = NO;
+    self.showsHorizontalScrollIndicator = NO;
     [self registerClass:[ARNRouletteWheelCell class] forCellWithReuseIdentifier:@"ARNRouletteWheelCell"];
 }
 

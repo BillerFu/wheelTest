@@ -56,7 +56,7 @@
     [self.rouletteWheelView setInterItemSpacing:1.1];
     [self.rouletteWheelView setItemSize:CGSizeMake(50, 50 * self.view.frame.size.height/self.view.frame.size.width)];
     self.rouletteWheelView.clipsToBounds = NO;
-    self.rouletteWheelView.backgroundColor = [UIColor lightGrayColor];
+//    self.rouletteWheelView.backgroundColor = [UIColor lightGrayColor];
     self.rouletteWheelView.dataSource = self;
     
     // overwrite default cell with a custom subcell
