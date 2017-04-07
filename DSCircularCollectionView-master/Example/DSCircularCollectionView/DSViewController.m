@@ -63,7 +63,7 @@
 
 -(void)setCircularLayout{
     DSCircularLayout *circularLayout = [[DSCircularLayout alloc] init];
-    [circularLayout initWithCentre:CGPointMake(SCREEN_WIDTH, SCREEN_HEIGHT)
+    [circularLayout initWithCentre:CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT)
                             radius:SCREEN_WIDTH/2 - ITEM_WIDTH/2
                           itemSize:CGSizeMake(ITEM_WIDTH, ITEM_HEIGHT)
                  andAngularSpacing:20];
