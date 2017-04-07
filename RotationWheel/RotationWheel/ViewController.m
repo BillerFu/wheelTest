@@ -32,16 +32,16 @@ CGFloat degreeToRadian(CGFloat degree)
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _rotatingView = [[RotatingWheel alloc] initWithFrame:CGRectMake(0, 0, 500, 500)];
+    _rotatingView = [[RotatingWheel alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     [self.view addSubview:_rotatingView];
-    _rotatingView.layer.cornerRadius = 100;
+//    _rotatingView.layer.cornerRadius = 100;
 //    _rotatingView.center = CGPointMake(CGRectGetMaxX(self.view.frame), CGRectGetMaxY(self.view.frame));
-//    _rotatingView.center = self.view.center;
-    _rotatingView.center = CGPointMake(self.view.frame.size.width, self.view.frame.size.height );
+    _rotatingView.center = self.view.center;
+//    _rotatingView.center = CGPointMake(self.view.frame.size.width, self.view.frame.size.height );
     
-    UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 500, 500)];
-    bgImageView.image = [UIImage imageNamed:@"ColorWheel1.jpg"];
-//    bgImageView.backgroundColor = [UIColor redColor];
+    UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+//    bgImageView.image = [UIImage imageNamed:@"ColorWheel1.jpg"];
+    bgImageView.backgroundColor = [UIColor redColor];
     
     [_rotatingView addSubview:bgImageView];
     
