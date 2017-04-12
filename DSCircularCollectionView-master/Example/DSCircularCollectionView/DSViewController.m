@@ -59,6 +59,8 @@
         count = 12;
     } completion:^(BOOL finished) {
         [self.collectionView reloadData];
+        self.collectionView.showsHorizontalScrollIndicator = NO;
+        self.collectionView.showsVerticalScrollIndicator = NO;
     }];
 }
 
@@ -68,6 +70,13 @@
                             radius:SCREEN_WIDTH/2 - ITEM_WIDTH/2
                           itemSize:CGSizeMake(ITEM_WIDTH, ITEM_HEIGHT)
                  andAngularSpacing:10];
+    /*
+                  90
+     
+     
+     180                           0
+     -------------------------------
+     */
     [circularLayout setStartAngle:M_PI endAngle:M_PI/ 9 * 8 / 2];
     circularLayout.mirrorX = NO;
     circularLayout.mirrorY = NO;
