@@ -33,7 +33,7 @@
     if ((self = [super initWithFrame:frame])) {
         circleRadious = menuRadious-(itemOffset+TYCircleCellSize.height/2)-TYCircleViewMargin-TYCircleViewMargin;
         
-        circleView = [[TYCircleView alloc]initWithFrame:CGRectMake(-circleRadious+(itemOffset+TYCircleCellSize.height/2)-TYDefaultItemPadding, TYCircleViewMargin+TYCircleViewMargin-TYDefaultItemPadding, (circleRadious+TYDefaultItemPadding)*2, (circleRadious+TYDefaultItemPadding)*2)];
+//        circleView = [[TYCircleView alloc]initWithFrame:CGRectMake(-circleRadious+(itemOffset+TYCircleCellSize.height/2)-TYDefaultItemPadding, TYCircleViewMargin+TYCircleViewMargin-TYDefaultItemPadding, (circleRadious+TYDefaultItemPadding)*2, (circleRadious+TYDefaultItemPadding)*2)];
         
         if (isCycle) {
             NSAssert(images.count>=4, @"option'count must big than 4");
@@ -56,7 +56,7 @@
         [centerButton setImage:[UIImage imageNamed:@"center_btn"] forState:UIControlStateNormal];
         [centerButton addTarget:self action:@selector(onCenterButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         
-        [self addSubview:circleView];
+//        [self addSubview:circleView];
         [self addSubview:circleCollectionView];
         [self addSubview:centerButton];
         
@@ -88,12 +88,12 @@
         [UIView animateWithDuration:0.3 animations:^{
             circleCollectionView.transform = CGAffineTransformIdentity;
             circleCollectionView.alpha = 1.f;
-            circleView.transform = CGAffineTransformIdentity;
-            circleView.alpha = 1.f;
+//            circleView.transform = CGAffineTransformIdentity;
+//            circleView.alpha = 1.f;
         }];
     } else {
         circleCollectionView.alpha = 1.f;
-        circleView.alpha = 1.f;
+//        circleView.alpha = 1.f;
     }
     self.hideMenu = NO;
 }
@@ -116,8 +116,8 @@
     CGAffineTransform scale = CGAffineTransformMakeScale(0.5, 0.5);
     circleCollectionView.transform = CGAffineTransformConcat(scale, translation);
     circleCollectionView.alpha = 0.f;
-    circleView.transform = CGAffineTransformMakeScale(0.6, 0.6);
-    circleView.alpha = 0.f;
+//    circleView.transform = CGAffineTransformMakeScale(0.6, 0.6);
+//    circleView.alpha = 0.f;
 }
 
 #pragma mark -setter
